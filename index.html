@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Flickr Feed Test</title>
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		
+		<link href='http://fonts.googleapis.com/css?family=Sonsie+One' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="style.css" title="Default Stylesheet" type="text/css" media="screen" charset="utf-8">
+
+		
+		
+	</head>
+	<body>
+		<header>
+			<nav>
+				
+				<ul>
+					<li><a href="http://tylerdow.com/flickrtest/index.html?tag=seattle">Seattle</a></li>
+					<li><a href="http://tylerdow.com/flickrtest/index.html?tag=sydney">Sydney</a></li>
+					<li><a href="http://tylerdow.com/flickrtest/index.html?tag=space%20needle">Space Needle</a></li>
+					<li><a href="http://tylerdow.com/flickrtest/index.html?tag=vizsla">Vizslas</a></li>
+					<li><a href="http://tylerdow.com/">TylerDow.com</a></li>
+				</ul>
+				
+			</nav>
+			<div class="hero-img">
+				<h2>Flickr API experiment</h2>
+				<!--<form name="form" id="form" method="post" onSubmit="postTag()">
+					<input type="text" class="choosetag" id="choosetag" />
+					<input type="submit" value="Submit" id="form">
+				</form> -->
+			</div>
+		</header>
+		
+		
+		<div id="photo-container">			
+			<div class="photo-set">
+				<!-- javascript content loads here -->
+			</div>
+		</div>
+
+	<script src="feed.js" charset="utf-8"></script>	
+	<script>flickrload();</script>
+	
+	<script>
+		function postTag() {
+			var tagValue = $("#choosetag").val();
+
+			$('#form').submit(function(){
+				window.location.href = 'index.html?tag='+ tagValue;
+			});
+
+		};
+		</script>
+	
+</body>
+</html>
